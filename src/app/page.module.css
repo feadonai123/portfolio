@@ -1,0 +1,155 @@
+.container{
+  display: grid;
+  grid-template-areas: "nav main";
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 1fr;
+  height: 100vh;
+}
+
+.nav{
+  grid-area: nav;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+
+  background-color: var(--primary-bg);
+  color: var(--primary-textColor);
+
+  margin: 2rem 0;
+}
+
+.nav .perfil{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+}
+
+.nav .perfil img{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.nav .perfil h4{
+  color: var(--primary);
+  font-weight: 400;
+  font-size: 1.2em;
+  line-height: 1.2em;
+}
+
+.nav ul{
+  list-style: none;
+  width: 100%;
+  padding: 0;
+}
+
+.nav ul li{
+  text-align: start;
+  border-top: 1px solid var(--primary-bg-border);
+}
+
+.nav ul li a{
+  font-size: 1.2em;
+  font-weight: 400;
+  line-height: 1.2rem;
+  padding: 1rem .5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav ul li a svg{
+  fill: var(--primary-textColor);
+  width: 1.2rem;
+  min-width: 1.2rem;
+  height: 1.2rem;
+}
+
+.nav ul li:last-child{
+  border-bottom: 1px solid var(--primary-bg-border);
+}
+
+.nav ul li:not(.active){
+  opacity: .8;
+}
+
+.nav ul li:not(.active):hover{
+  border-right: 5px solid var(--primary);
+  opacity: 1;
+}
+
+.nav ul li.active{
+  border-right: 5px solid var(--primary);
+  opacity: 1;
+}
+
+.main{
+  grid-area: main;
+  background-image: url("/background-desk.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--secondary-textColor);
+}
+
+.main .card{
+  width: 90%;
+  margin: 2rem auto;
+  background-color: var(--secondary-bg);
+  color: var(--secondary-textColor);
+  padding: 1rem;
+  box-shadow: var(--shadow);
+}
+
+.main .card .header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+.main .card .header h2{
+  font-size: 3.5rem;
+  font-weight: 400;
+  color: var(--primary);
+}
+
+.main .card .header .borderLeft{
+  position: absolute;
+  border-top: 3px solid var(--primary);
+  border-left: 3px solid var(--primary);
+  width: 100%;
+  max-width: 100px;
+  height: 80%;
+  left: -6px;
+  top: -6px;
+}
+
+.main .card.pageOut {
+  animation: scale-out-center .5s cubic-bezier(.55,.085,.68,.53) both
+}
+
+.main .card.pageInTop{
+  animation: slide-in-fwd-top .4s cubic-bezier(.25,.46,.45,.94) both
+}
+.main .card.pageInRight{
+  animation: slide-in-fwd-right .4s cubic-bezier(.25,.46,.45,.94) both
+}
+.main .card.pageInLeft{
+  animation: slide-in-fwd-left .4s cubic-bezier(.25,.46,.45,.94) both
+}
+
+
+@keyframes scale-out-center{0%{transform:scale(1);opacity:1}100%{transform:scale(0);opacity:0}}
+
+
+@keyframes slide-in-fwd-top{0%{transform:translateZ(-1400px) translateY(-800px);opacity:0}100%{transform:translateZ(0) translateY(0);opacity:1}}
+@keyframes slide-in-fwd-right{0%{transform:translateZ(-1400px) translateX(1000px);opacity:0}100%{transform:translateZ(0) translateX(0);opacity:1}}
+@keyframes slide-in-fwd-left{0%{transform:translateZ(-1400px) translateX(-1000px);opacity:0}100%{transform:translateZ(0) translateX(0);opacity:1}}
