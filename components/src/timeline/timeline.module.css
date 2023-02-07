@@ -1,0 +1,55 @@
+.timeline{
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline .item{
+  display: flex;
+  flex-direction: row;
+  min-height: 100px;
+}
+
+.timeline .item .date{
+  align-self: center;
+  width: 100px;
+  min-width: 140px;
+}
+
+.timeline .item .line{
+  width: 2px;
+  background-color: var(--primary);
+  position: relative;
+  margin: 0 1.5rem;
+}
+
+.timeline .item .line::after{
+  content: '';
+  position: absolute;
+  background-color: var(--primary);
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  left: -0.75rem;
+  top: calc(50% - 0.75rem);
+}
+
+.timeline .item .card{
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+}
+
+.timeline .item .card .title{
+  color: var(--primary);
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.timeline .item .card .where{
+  font-weight: bold;
+}
+
+.timeline .item .card .description{
+
+}

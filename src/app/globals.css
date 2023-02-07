@@ -14,6 +14,7 @@
   --shadow: 0 1px 33px rgb(0 0 0 / 15%);
 
   --primary: #ff724c;
+  --secondary: #555;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -26,6 +27,7 @@
     --secondary-textColor: #555;
 
     --primary: #ff724c;
+    --secondary: #555;
 
     --shadow: 0 1px 33px rgb(0 0 0 / 15%);
   }
@@ -59,3 +61,15 @@ a {
   }
 }
 
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+}

@@ -1,0 +1,58 @@
+.courses{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 1fr);
+  grid-template-rows: 1fr;
+  gap: 1rem;
+}
+
+.courses .item{
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+  padding: 1rem;
+}
+
+.courses .item .header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 1px solid var(--primary);
+}
+
+.courses .item .header .title{
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.courses .item .header .date{
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.courses .item .where{
+  font-weight: bold;
+  opacity: .8;
+}
+
+.courses .item .description{
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.2rem;
+}
+
+.courses .item .description a{
+  color: var(--primary);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: .3rem;
+}
+
+.courses .item .description a svg{
+  fill: var(--primary);
+  height: 1.2rem;
+  width: 1.2rem;
+}

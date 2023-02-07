@@ -22,10 +22,10 @@ import StarIcon from '../../assets/icons/star.js'
 import BriefcaseIcon from '../../assets/icons/briefcase.js'
 
 const pages : { [key: string]: string } = {
-  "/": "Felipe Adonai de Moraes",
+  "/": "",
   "/about": "Sobre mim",
   "/formation": "Formação",
-  "/courses": "Cursos",
+  "/courses": "Cursos e Voluntariado",
   "/experience": "Carreira",
   "/skills": "Habilidades e competências",
   "/projects": "Projetos"
@@ -65,13 +65,13 @@ export default function LandingPage() {
   return (
     <div className={styles.container}>
       <nav className={styles.nav}>
-        <div className={styles.perfil}>
+        <div className={styles.perfil} onClick={() =>goTo("/")}>
           <Image src="/photo.png" alt="Logo" width={100} height={100} />
           <h4>Felipe Adonai</h4>
         </div>
         <ul>
-          <li className={page === "/" ? styles.active : ""}>
-            <Link onClick={() =>goTo("/")} href="/">
+          <li className={page === "/about" ? styles.active : ""}>
+            <Link onClick={() =>goTo("/about")} href="/">
               Sobre mim
               <PerfilIcon />
             </Link>
@@ -84,7 +84,7 @@ export default function LandingPage() {
           </li>
           <li className={page === "/courses" ? styles.active : ""}>
             <Link onClick={() =>goTo("/courses")} href="/">
-              Cursos
+              Cursos e Voluntariado
               <BooksIcon />
             </Link>
           </li>
@@ -110,7 +110,7 @@ export default function LandingPage() {
       </nav>
 
       <main className={styles.main}>
-        <div className={styles.card} id="card">
+        <div className={`${styles.card}`} id="card" data-is-home={page === "/"}>
           <div className={styles.header} >
             <span className={styles.borderLeft}/>
             <h2>{pageTitle}</h2>

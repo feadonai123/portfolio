@@ -3,7 +3,7 @@
   grid-template-areas: "nav main";
   grid-template-columns: 200px 1fr;
   grid-template-rows: 1fr;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .nav{
@@ -17,10 +17,11 @@
   background-color: var(--primary-bg);
   color: var(--primary-textColor);
 
-  margin: 2rem 0;
+  margin-top: 2rem;
 }
 
 .nav .perfil{
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -100,11 +101,16 @@
 
 .main .card{
   width: 90%;
+  max-width: 90%;
   margin: 2rem auto;
   background-color: var(--secondary-bg);
   color: var(--secondary-textColor);
   padding: 1rem;
   box-shadow: var(--shadow);
+  height: calc(100vh - 4rem);
+  max-height: calc(100vh - 4rem);
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .main .card .header{
@@ -146,6 +152,14 @@
   animation: slide-in-fwd-left .4s cubic-bezier(.25,.46,.45,.94) both
 }
 
+.main .card[data-is-home="true"]{
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.main .card[data-is-home="true"] .header{
+  display: none;
+}
 
 @keyframes scale-out-center{0%{transform:scale(1);opacity:1}100%{transform:scale(0);opacity:0}}
 

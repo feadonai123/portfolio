@@ -1,0 +1,133 @@
+.projects{
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  margin-bottom: 3rem;
+}
+
+.project{
+  display: grid;
+  grid-template-areas: 
+    "title image"
+    "date image"
+    "description image"
+    "technologies image"
+    "links links";
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.projectRight{
+  grid-template-areas: 
+    "image title"
+    "image date"
+    "image description"
+    "image technologies"
+    "links links";
+}
+
+.title{
+  grid-area: title;
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--primary);
+}
+
+.date{
+  grid-area: date;
+  font-size: 1rem;
+  font-weight: 400;
+  opacity: .8;
+}
+
+.description{
+  grid-area: description;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.technologies{
+  grid-area: technologies;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.technologies .technology{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .3rem;
+  max-width: 4rem;
+  text-align: center;
+}
+
+.technologies .technology svg{
+  fill: var(--primary);
+  height: 3rem;
+  width: 3rem;
+}
+
+.image{
+  grid-area: image;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.miniatures{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.miniatures > img{
+  width: 6rem;
+  height: 6rem;
+  border-radius: 10px;
+  border: 1px solid;
+  border-color:
+    rgb(213, 220, 226)
+    rgb(213, 220, 226)
+    rgb(184, 194, 204);
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.image > img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: 
+    perspective(75em)
+    rotateX(18deg);
+  box-shadow:
+    rgba(22, 31, 39, 0.42) 0px 60px 123px -25px,
+    rgba(19, 26, 32, 0.08) 0px 35px 75px -35px;
+  border-radius: 10px;
+  border: 1px solid;
+  border-color:
+    rgb(213, 220, 226)
+    rgb(213, 220, 226)
+    rgb(184, 194, 204);
+}
+
+.links{
+  grid-area: links;
+}
+
+.links a{
+  color: var(--primary);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: .3rem;
+  width: fit-content;
+}
+
+.links a svg{
+  fill: var(--primary);
+  height: 1.2rem;
+  width: 1.2rem;
+}
