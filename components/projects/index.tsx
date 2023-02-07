@@ -323,7 +323,7 @@ export default function Projects() {
         <div className={styles.title}>MEDIDOR DE FLUXO DE AR ULTRASSÔNICO</div>
         <div className={styles.date}>MAR/2020 - SET/2020</div>
         <div className={styles.description}>
-          Projeto de um respirador pulmonar desenvolvido durante a pandemia, junto com professores e alunos. Fui responsável pelo desenvolvimento de um circuito medidor das variações do fluxo de ar em um determinado condutor, para isso, foi utilizando sensores ultrassónicos controlados via Arduino, e um dispositivo PWM controlador do fluxo de ar.
+          Projeto de um respirador pulmonar desenvolvido durante a pandemia, junto com professores e alunos. Fui responsável pelo desenvolvimento de um circuito medidor das variações do fluxo de ar em um determinado condutor, para isso, foi utilizado sensores ultrassônicos controlados via Arduino, e um dispositivo PWM controlador do fluxo de ar.
         </div>
         <div className={styles.technologies}>
           <div className={styles.technology}>

@@ -10,7 +10,7 @@ export default function About() {
         <p className={styles.title}><strong>OBJETIVO PROFISSIONAL</strong></p>
         <p>
           <span className={styles.circle}></span>Aplicar meu conhecimento no desenvolvimento de soluções críticas.<br/><br/>
-          <span className={styles.circle}></span>Desenvolver minha carreiro sob a supervisão e estímulo de uma empresa comprometida com a inovação.<br/><br/>
+          <span className={styles.circle}></span>Desenvolver minha carreira sob a supervisão e estímulo de uma empresa comprometida com a inovação.<br/><br/>
           <span className={styles.circle}></span>Sou altamente motivado a continuar aprendendo e melhorando minha técnica.<br/><br/>
         </p>
       </div>
