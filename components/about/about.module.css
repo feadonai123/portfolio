@@ -1,33 +1,9 @@
 
 .about{
   display: grid;
-  grid-template-areas: "image description details";
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "description details";
+  grid-template-columns: 1fr 1fr;
   gap: 1rem;
-}
-
-.image{
-  grid-area: image;
-  padding: 0 1rem 1rem 1rem;
-}
-
-.image img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transform: 
-    perspective(38em)
-    rotateX(3deg) 
-    rotateY(11deg);
-  box-shadow:
-    rgba(22, 31, 39, 0.42) 0px 60px 123px -25px,
-    rgba(19, 26, 32, 0.08) 0px 35px 75px -35px;
-  border-radius: 10px;
-  border: 1px solid;
-  border-color:
-    rgb(213, 220, 226)
-    rgb(213, 220, 226)
-    rgb(184, 194, 204);
 }
 
 .description{
@@ -105,4 +81,13 @@
   display: inline-block;
   vertical-align: middle;
   margin-right: .3rem;
+}
+
+@media screen and (max-width: 768px){
+  .about{
+    grid-template-areas: 
+      "description"
+      "details";
+    grid-template-columns: 1fr;
+  }
 }

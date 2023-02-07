@@ -41,7 +41,127 @@ export default function Projects() {
           </div>
         </div>
         <div className={styles.image}>
-          <img src="/projects/gestaoFrota.png" alt="Gestão de Frota" />
+        <Gallery>
+            <Item
+              original={"/projects/gestaoFrota.png"}
+              thumbnail={"/projects/gestaoFrota.png"}
+              width="1600"
+              height="1600"
+            >
+              {({ ref, open }: { ref: any, open: any }) => (
+                <img 
+                  ref={ref as any}
+                  style={{ cursor: 'pointer' }}
+                  onClick={open} 
+                  src="/projects/gestaoFrota.png" 
+                  alt="Gestão de Frota" 
+                />
+              )}
+            </Item>
+            <div className={styles.miniatures}>
+              <Item
+                original={"/projects/gestaoFrota2.png"}
+                thumbnail={"/projects/gestaoFrota2.png"}
+                width="1600"
+                height="1600"
+              >
+                {({ ref, open }: { ref: any, open: any }) => (
+                  <img 
+                    ref={ref as any}
+                    style={{ cursor: 'pointer' }}
+                    onClick={open} 
+                    src="/projects/gestaoFrota2.png" 
+                    alt="Gestão de Frota" 
+                  />
+                )}
+              </Item>
+              
+              <Item
+                original={"/projects/gestaoFrota3.png"}
+                thumbnail={"/projects/gestaoFrota3.png"}
+                width="1600"
+                height="1600"
+              >
+                {({ ref, open }: { ref: any, open: any }) => (
+                  <img 
+                    ref={ref as any}
+                    style={{ cursor: 'pointer' }}
+                    onClick={open} 
+                    src="/projects/gestaoFrota3.png" 
+                    alt="Drone" 
+                  />
+                )}
+              </Item>
+
+              <Item
+                original={"/projects/gestaoFrota4.png"}
+                thumbnail={"/projects/gestaoFrota4.png"}
+                width="1600"
+                height="1600"
+              >
+                {({ ref, open }: { ref: any, open: any }) => (
+                  <img 
+                    ref={ref as any}
+                    style={{ cursor: 'pointer' }}
+                    onClick={open} 
+                    src="/projects/gestaoFrota4.png" 
+                    alt="Drone" 
+                  />
+                )}
+              </Item>
+
+              <Item
+                original={"/projects/gestaoFrota5.png"}
+                thumbnail={"/projects/gestaoFrota5.png"}
+                width="1600"
+                height="1600"
+              >
+                {({ ref, open }: { ref: any, open: any }) => (
+                  <img 
+                    ref={ref as any}
+                    style={{ cursor: 'pointer' }}
+                    onClick={open} 
+                    src="/projects/gestaoFrota5.png" 
+                    alt="Drone" 
+                  />
+                )}
+              </Item>
+
+              <Item
+                original={"/projects/gestaoFrota6.png"}
+                thumbnail={"/projects/gestaoFrota6.png"}
+                width="1600"
+                height="1600"
+              >
+                {({ ref, open }: { ref: any, open: any }) => (
+                  <img 
+                    ref={ref as any}
+                    style={{ cursor: 'pointer' }}
+                    onClick={open} 
+                    src="/projects/gestaoFrota6.png" 
+                    alt="Drone" 
+                  />
+                )}
+              </Item>
+
+              <Item
+                original={"/projects/gestaoFrota7.png"}
+                thumbnail={"/projects/gestaoFrota7.png"}
+                width="1600"
+                height="1600"
+              >
+                {({ ref, open }: { ref: any, open: any }) => (
+                  <img 
+                    ref={ref as any}
+                    style={{ cursor: 'pointer' }}
+                    onClick={open} 
+                    src="/projects/gestaoFrota7.png" 
+                    alt="Drone" 
+                  />
+                )}
+              </Item>
+            </div>
+          </Gallery>
         </div>
         <div className={styles.links}>
           <Link href="https://gestao-frota-front-git-polimento-feadonai123.vercel.app/" target="_blank">
@@ -131,6 +251,57 @@ export default function Projects() {
                     style={{ cursor: 'pointer' }}
                     onClick={open} 
                     src="/projects/drone3.jpeg" 
+                    alt="Drone" 
+                  />
+                )}
+              </Item>
+
+              <Item
+                original={"/projects/drone4.jpeg"}
+                thumbnail={"/projects/drone4.jpeg"}
+                width="1600"
+                height="1600"
+              >
+                {({ ref, open }: { ref: any, open: any }) => (
+                  <img 
+                    ref={ref as any}
+                    style={{ cursor: 'pointer' }}
+                    onClick={open} 
+                    src="/projects/drone4.jpeg" 
+                    alt="Drone" 
+                  />
+                )}
+              </Item>
+
+              <Item
+                original={"/projects/drone5.jpeg"}
+                thumbnail={"/projects/drone5.jpeg"}
+                width="1600"
+                height="1600"
+              >
+                {({ ref, open }: { ref: any, open: any }) => (
+                  <img 
+                    ref={ref as any}
+                    style={{ cursor: 'pointer' }}
+                    onClick={open} 
+                    src="/projects/drone5.jpeg" 
+                    alt="Drone" 
+                  />
+                )}
+              </Item>
+
+              <Item
+                original={"/projects/drone6.jpeg"}
+                thumbnail={"/projects/drone6.jpeg"}
+                width="1600"
+                height="1600"
+              >
+                {({ ref, open }: { ref: any, open: any }) => (
+                  <img 
+                    ref={ref as any}
+                    style={{ cursor: 'pointer' }}
+                    onClick={open} 
+                    src="/projects/drone6.jpeg" 
                     alt="Drone" 
                   />
                 )}

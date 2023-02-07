@@ -6,9 +6,6 @@ import Linkedin from "../../assets/icons/linkedin"
 export default function About() {
   return (
     <div className={styles.about}>
-      <div className={styles.image}>
-        <img src="photo.png" alt="Foto de perfil" />
-      </div>
       <div className={styles.description}>
         <p className={styles.title}><strong>OBJETIVO PROFISSIONAL</strong></p>
         <p>

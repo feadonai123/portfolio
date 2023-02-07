@@ -7,9 +7,10 @@
   display: flex;
   flex-direction: row;
   min-height: 100px;
+  position: relative;
 }
 
-.timeline .item .date{
+.timeline .item .dateDesktop{
   align-self: center;
   width: 100px;
   min-width: 140px;
@@ -38,6 +39,7 @@
   display: flex;
   flex-direction: column;
   gap: .3rem;
+  padding: 1rem 0;
 }
 
 .timeline .item .card .title{
@@ -50,6 +52,17 @@
   font-weight: bold;
 }
 
-.timeline .item .card .description{
+.timeline .item .card .card .dateMobile{
+  display: none;
+}
+
+@media screen and (max-width: 768px){
+  .timeline .item .dateDesktop{
+    display: none;
+  }
+
+  .timeline .item .card .card .dateMobile{
+    display: block;
+  }
 
 }

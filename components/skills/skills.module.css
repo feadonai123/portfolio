@@ -59,3 +59,9 @@
   text-align: center;
   height: 100%;
 }
+
+@media screen and (max-width: 768px) {
+  .skills{
+    grid-template-columns: 1fr;
+  }
+}

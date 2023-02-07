@@ -4,7 +4,7 @@ import './globals.css'
 import Link from 'next/link'
 import Image from 'next/image'
 import styles from './page.module.css'
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 import Home from 'components/home'
 import About from 'components/about'
@@ -20,6 +20,7 @@ import ProjectIcon from '../../assets/icons/project.js'
 import SchoolIcon from '../../assets/icons/school.js'
 import StarIcon from '../../assets/icons/star.js'
 import BriefcaseIcon from '../../assets/icons/briefcase.js'
+import MenuIcon from '../../assets/icons/menu.js'
 
 const pages : { [key: string]: string } = {
   "/": "",
@@ -39,11 +40,15 @@ const animationsIn : { [key: string]: string } = {
 
 export default function LandingPage() {
 
+  const navRef = useRef<HTMLDivElement>(null)
   const [ page, setPage ] = useState("/")
   const pageTitle = pages[page]
+  const [ isMenuOpen, setIsMenuOpen ] = useState(false)
 
   const goTo = (path: string) => {
-
+    if(path === page) return
+    
+    isMenuOpen && setIsMenuOpen(false)
     const card = document.getElementById("card")
     const randomAnimation = Math.floor(Math.random() * 3)
     const animation = Object.values(animationsIn)[randomAnimation]
@@ -62,11 +67,33 @@ export default function LandingPage() {
     }, 500)
   }
 
+
+  const handleOpenMenu = () => {
+    setIsMenuOpen(true)
+  }
+
+  const handleCloseMenu = () => {
+    setIsMenuOpen(false)
+  }
+
+  useEffect(() => {
+    const handleClickOutside = (event : MouseEvent) => {
+      if (navRef.current && !navRef.current.contains(event.target as Element)) {
+        handleCloseMenu();
+      }
+    };
+    document.addEventListener('click', handleClickOutside, true);
+    return () => {
+      document.removeEventListener('click', handleClickOutside, true);
+    };
+  }, [handleCloseMenu]);
+
+
   return (
-    <div className={styles.container}>
-      <nav className={styles.nav}>
+    <div className={`${styles.container} ${isMenuOpen ? styles.menuOpen : ""}`}>
+      <nav className={styles.nav} ref={navRef}>
         <div className={styles.perfil} onClick={() =>goTo("/")}>
-          <Image src="/photo.png" alt="Logo" width={100} height={100} />
+          <Image src="/photo.jpeg" alt="Logo" width={100} height={100} />
           <h4>Felipe Adonai</h4>
         </div>
         <ul>
@@ -108,6 +135,10 @@ export default function LandingPage() {
           </li>
         </ul>
       </nav>
+
+      <span className={styles.menu} onClick={handleOpenMenu}>
+        <MenuIcon />
+      </span>
 
       <main className={styles.main}>
         <div className={`${styles.card}`} id="card" data-is-home={page === "/"}>
