@@ -92,9 +92,13 @@
 .nav ul li{
   text-align: start;
   border-top: 1px solid var(--primary-bg-border);
+  display: flex;
 }
 
-.nav ul li a{
+.nav ul li button{
+  all: unset;
+  cursor: pointer;
+  width: 100%;
   font-size: 1.2em;
   font-weight: 400;
   line-height: 1.2rem;
@@ -105,7 +109,7 @@
   justify-content: space-between;
 }
 
-.nav ul li a svg{
+.nav ul li button svg{
   fill: var(--primary-textColor);
   width: 1.2rem;
   min-width: 1.2rem;
@@ -221,6 +225,7 @@
   }
 
   .nav{
+    white-space: nowrap;
     z-index: 999;
     max-width: 300px;
     transition: width .3s ease-in-out;

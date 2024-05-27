@@ -1,7 +1,6 @@
 'use client'
 
 import './globals.css'
-import Link from 'next/link'
 import Image from 'next/image'
 import styles from './page.module.css'
 import { useState, useEffect, useRef } from 'react'
@@ -98,40 +97,40 @@ export default function LandingPage() {
         </div>
         <ul>
           <li className={page === "/about" ? styles.active : ""}>
-            <Link onClick={() =>goTo("/about")} href="/">
+            <button onClick={() =>goTo("/about")}>
               Sobre mim
               <PerfilIcon />
-            </Link>
+            </button>
           </li>
           <li className={page === "/formation" ? styles.active : ""}>
-            <Link onClick={() =>goTo("/formation")} href="/">
+            <button onClick={() =>goTo("/formation")}>
               Formação
               <SchoolIcon />
-            </Link>
+            </button>
           </li>
           <li className={page === "/courses" ? styles.active : ""}>
-            <Link onClick={() =>goTo("/courses")} href="/">
+            <button onClick={() =>goTo("/courses")}>
               Cursos e Voluntariado
               <BooksIcon />
-            </Link>
+            </button>
           </li>
           <li className={page === "/experience" ? styles.active : ""}>
-            <Link onClick={() =>goTo("/experience")} href="/">
+            <button onClick={() =>goTo("/experience")}>
               Carreira
               <BriefcaseIcon />
-            </Link>
+            </button>
           </li>
           <li className={page === "/skills" ? styles.active : ""}>
-            <Link onClick={() =>goTo("/skills")} href="/">
+            <button onClick={() =>goTo("/skills")}>
               Habilidades e competências
               <StarIcon />
-            </Link>
+            </button>
           </li>
           <li className={page === "/projects" ? styles.active : ""}>
-            <Link onClick={() =>goTo("/projects")} href="/">
+            <button onClick={() =>goTo("/projects")}>
               Projetos
               <ProjectIcon />
-            </Link>
+            </button>
           </li>
         </ul>
       </nav>
